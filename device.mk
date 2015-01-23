@@ -236,6 +236,12 @@ ifneq ($(QCPATH),)
 PRODUCT_BOOT_JARS += WfdCommon
 endif
 
+# Development settings
+ADDITIONAL_DEFAULT_PROPERTIES += \
+    ro.debuggable=1 \
+    ro.adb.secure=0 \
+    ro.secure=0
+
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/hostapd.accept:system/etc/hostapd/hostapd.accept \
     $(LOCAL_PATH)/configs/hostapd.conf:system/etc/hostapd/hostapd_default.conf \
