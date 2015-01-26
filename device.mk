@@ -59,7 +59,7 @@ TARGET_SCREEN_WIDTH := 720
 $(call inherit-product, frameworks/native/build/phone-hdpi-2048-dalvik-heap.mk)
 
 # call hwui memory config
-$(call inherit-product, frameworks/native/build/phone-hdpi-2048-hwui-memory.mk)
+$(call inherit-product, frameworks/native/build/phone-xxhdpi-2048-hwui-memory.mk)
 
 # Audio
 PRODUCT_PACKAGES += \
@@ -241,6 +241,9 @@ ADDITIONAL_DEFAULT_PROPERTIES += \
     ro.debuggable=1 \
     ro.adb.secure=0 \
     ro.secure=0
+    
+PRODUCT_PROPERTY_OVERRIDES += \
+	telephony.lteOnGsmDevice=1    
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/hostapd.accept:system/etc/hostapd/hostapd.accept \
