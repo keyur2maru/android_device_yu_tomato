@@ -56,10 +56,10 @@ TARGET_SCREEN_HEIGHT := 1280
 TARGET_SCREEN_WIDTH := 720
 
 # call dalvik heap config
-$(call inherit-product-if-exists, frameworks/native/build/phone-hdpi-2048-dalvik-heap.mk)
+$(call inherit-product, frameworks/native/build/phone-hdpi-2048-dalvik-heap.mk)
 
 # call hwui memory config
-$(call inherit-product-if-exists, frameworks/native/build/phone-hdpi-2048-hwui-memory.mk)
+$(call inherit-product, frameworks/native/build/phone-hdpi-2048-hwui-memory.mk)
 
 # Audio
 PRODUCT_PACKAGES += \
